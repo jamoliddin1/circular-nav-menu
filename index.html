@@ -6,8 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/f29eef3e38.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <title>Circular navigation menu</title>
 </head>
 <body>
+  <ul class="circle-menu">
+    <div class="toggle">
+      <i class="fa-regular fa-plus"></i>
+    </div>
+  </ul>
+
+  <script>
+    $(document).ready(function(){
+      $(".toggle").click(function(){
+        $(".circle-menu").toggleClass("active");
+        $(".toggle").toggleClass("active");
+      })
+    })
+  </script>
 </body>
 </html>
