@@ -30,15 +30,49 @@ body {
   width: 75px;
   height: 75px;
   cursor: pointer;
-  background-color: #fff;
+  background: #fff;
   color: #212529;
   transition: 0.5s;
   border-radius: 50%;
 }
 
-.toggle.active {
+ .toggle.active {
   transform: rotate(315deg);
-  box-shadow: 0 0 0 68px #fff;
+  box-shadow: 0 0 0 60px #fff;
   background: linear-gradient(45deg, deeppink, #2980b9);
   color: #fff;
+}
+
+.circle-menu__item {
+  position: absolute;
+  left: 20px;
+  list-style: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: rotate(calc(360deg / 8 * var(--i))) translateX(40px);
+  transform-origin: 130px;
+  transition: 0.5s;
+  z-index: 20;
+}
+
+.circle-menu.active .circle-menu__item {
+  visibility: visible;
+  opacity: 1;
+}
+
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #212529;
+  transform: rotate(calc(360deg / -8 * var(--i)));
+  border-radius: 50%;
+}
+
+.circle-menu__item.active {
+  transform: rotate(calc(360deg / 8 * var(--i))) translateX(12px);
 }
